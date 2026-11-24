@@ -12,7 +12,10 @@ Viro is an inference API (`https://api.viro.app/v1`) that only routes to verifie
 | `viro-migrate` | Move an existing app's AI calls to Viro without changing its behaviour. |
 | `viro-pick-model` | Choose a model or router by price, context window and energy standard, from the live catalog. |
 
-Plus the **Viro docs MCP server** (`https://console.viro.app/mcp`): `search_docs`, `read_page`, `list_pages` and `list_models` (live prices and energy standards).
+Plus the **Viro MCP server** (`https://console.viro.app/mcp`):
+
+- Docs: `search_docs`, `read_page`, `list_pages` and `list_models` (live prices and energy standards).
+- Your account, when `VIRO_API_KEY` is set: `check_setup` (is the key working, balance, limits), `get_usage` (spend, tokens and energy by model and day), `list_requests` and `get_request` (recent requests and why one failed). Read-only; prompts are never stored, so none are shown.
 
 ## Install
 
@@ -30,15 +33,15 @@ codex plugin marketplace add nick-viro/viro-skills
 codex plugin add viro@viro
 ```
 
-Then ask your agent to "run on Viro" (or use `viro-setup`). You'll need an API key from https://console.viro.app/api-keys.
+Then ask your agent to "run on Viro" (or use `viro-setup`). You'll need an API key from https://console.viro.app/api-keys. Export it as `VIRO_API_KEY` before starting the agent and the account tools work too: ask "is my Viro key working?" or "why did my last request fail?".
 
-## Just the docs
+## Just the MCP server
 
-Prefer not to install anything? Add only the docs MCP server:
+Prefer not to install anything? Add only the MCP server (drop the key part for docs only):
 
 ```bash
-claude mcp add --transport http viro-docs https://console.viro.app/mcp
-codex mcp add viro-docs --url https://console.viro.app/mcp
+claude mcp add --transport http viro-docs https://console.viro.app/mcp --header "Authorization: Bearer $VIRO_API_KEY"
+codex mcp add viro-docs --url https://console.viro.app/mcp --bearer-token-env-var VIRO_API_KEY
 ```
 
 Or point your agent at https://console.viro.app/llms.txt.

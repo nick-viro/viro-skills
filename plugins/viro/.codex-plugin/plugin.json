@@ -1,7 +1,7 @@
 {
   "name": "viro",
-  "version": "0.1.0",
-  "description": "Run your coding agent on clean energy: switch Codex or Claude Code to the Viro API, migrate an app's AI calls, and pick models by price and energy.",
+  "version": "0.2.0",
+  "description": "Run your coding agent on clean energy: switch Codex or Claude Code to the Viro API, migrate an app's AI calls, pick models by price and energy, and check your key, usage and failed requests.",
   "author": {
     "name": "Viro",
     "url": "https://www.viro.app"
@@ -9,21 +9,32 @@
   "homepage": "https://www.viro.app/api",
   "repository": "https://github.com/nick-viro/viro-skills",
   "license": "MIT",
-  "keywords": ["viro", "clean-energy", "renewable", "inference", "codex", "claude-code", "migration"],
+  "keywords": [
+    "viro",
+    "clean-energy",
+    "renewable",
+    "inference",
+    "codex",
+    "claude-code",
+    "migration"
+  ],
   "skills": "./skills/",
   "mcpServers": "./.mcp.json",
   "interface": {
     "displayName": "Viro",
     "shortDescription": "Run your coding agent on clean energy",
-    "longDescription": "Switch Codex or Claude Code to the Viro API (renewable-verified or energy-matched compute), migrate an app's AI calls to Viro, and pick models by price, context and energy, with Viro's docs available over MCP.",
+    "longDescription": "Switch Codex or Claude Code to the Viro API (renewable-verified or energy-matched compute), migrate an app's AI calls to Viro, and pick models by price, context and energy, with Viro's docs and your own account (key check, usage, recent requests) available over MCP.",
     "developerName": "Viro",
     "category": "Developer Tools",
-    "capabilities": ["Read", "Write"],
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
     "websiteURL": "https://www.viro.app/api",
     "defaultPrompt": [
       "Use $viro-setup to run Codex on Viro.",
       "Use $viro-migrate to move this app's AI calls to Viro.",
-      "Use $viro-pick-model to choose a Viro model for this task."
+      "Is my Viro key working, and did any requests fail today?"
     ]
   }
 }

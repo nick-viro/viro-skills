@@ -2,7 +2,10 @@
   "mcpServers": {
     "viro-docs": {
       "type": "http",
-      "url": "https://console.viro.app/mcp"
+      "url": "https://console.viro.app/mcp",
+      "headers": {
+        "Authorization": "Bearer ${VIRO_API_KEY:-}"
+      }
     }
   }
 }

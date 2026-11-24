@@ -79,6 +79,8 @@ curl -s https://api.viro.app/v1/responses \
 
 A `401` means the key is wrong; a `402` means the account needs credit (https://console.viro.app/billing).
 
+To check the key and balance without making a model call, `GET https://api.viro.app/v1/account` with the same key (or the `viro-docs` MCP server's `check_setup` tool, once `VIRO_API_KEY` is set when the agent starts). It reports whether the account can make requests, the balance, and the key's rate and spend limits.
+
 ## 5. Tell the user how to switch over
 
 You cannot change the model of the session you are running in. End by saying exactly what to do:
@@ -86,4 +88,4 @@ You cannot change the model of the session you are running in. End by saying exa
 - **Claude Code**: quit and start a new `claude` session. It will note that it doesn't recognise `viro/clean`; that's expected.
 - **Codex**: open a new terminal (so `VIRO_API_KEY` is set) and run `codex`. It will warn there's no metadata for `viro/clean`; that's expected and harmless.
 
-Each request then shows up at https://console.viro.app/usage with its energy and cost.
+Each request then shows up at https://console.viro.app/usage with its energy and cost. Mention that with `VIRO_API_KEY` exported, they can ask this agent "is my Viro key working?", "what did I spend this week?" or "why did my last request fail?": the plugin's `viro-docs` MCP server answers from their account (`check_setup`, `get_usage`, `list_requests`, `get_request`).

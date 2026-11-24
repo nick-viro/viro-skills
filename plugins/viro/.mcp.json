@@ -1,7 +1,10 @@
 {
   "mcpServers": {
     "viro-docs": {
-      "url": "https://console.viro.app/mcp"
+      "url": "https://console.viro.app/mcp",
+      "env_http_headers": {
+        "x-api-key": "VIRO_API_KEY"
+      }
     }
   }
 }
