@@ -1,0 +1,6 @@
+interface:
+  display_name: "Viro Setup"
+  short_description: "Run this coding agent on the Viro API"
+  default_prompt: "Use $viro-setup to switch this agent to Viro."
+policy:
+  allow_implicit_invocation: true

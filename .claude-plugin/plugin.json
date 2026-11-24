@@ -1,0 +1,14 @@
+{
+  "name": "viro",
+  "displayName": "Viro",
+  "description": "Run your coding agent on clean energy: switch Claude Code or Codex to the Viro API, migrate an app's AI calls, and pick models by price and energy.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Viro",
+    "url": "https://www.viro.app"
+  },
+  "homepage": "https://www.viro.app/api",
+  "repository": "https://github.com/nick-viro/viro-skills",
+  "license": "MIT",
+  "keywords": ["viro", "clean-energy", "renewable", "inference", "claude-code", "codex", "migration", "agent-skills"]
+}

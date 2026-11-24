@@ -1,0 +1,15 @@
+{
+  "name": "viro",
+  "description": "Official Viro skills: run your coding agent on clean energy, and move your app's AI calls to Viro.",
+  "owner": {
+    "name": "Viro",
+    "url": "https://www.viro.app/api"
+  },
+  "plugins": [
+    {
+      "name": "viro",
+      "source": "./",
+      "description": "Run Claude Code or Codex on the Viro API, migrate an app's AI calls, and pick models by price and energy, with Viro's docs over MCP."
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+interface:
+  display_name: "Viro Migrate"
+  short_description: "Move this app's AI calls to Viro"
+  default_prompt: "Use $viro-migrate to move this project's AI calls to Viro."
+policy:
+  allow_implicit_invocation: true
