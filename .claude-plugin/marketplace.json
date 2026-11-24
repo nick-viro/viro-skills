@@ -9,7 +9,7 @@
     {
       "name": "viro",
       "source": "./",
-      "description": "Run Claude Code or Codex on the Viro API, migrate an app's AI calls, and pick models by price and energy, with Viro's docs over MCP."
+      "description": "Run Claude Code or Codex on the Viro API, migrate an app's AI calls, pick models by price and energy, and check your key, usage and failed requests, with Viro's docs and account over MCP."
     }
   ]
 }
